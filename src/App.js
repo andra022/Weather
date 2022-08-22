@@ -5,7 +5,7 @@ function App() {
   const[data,setData] = useState({})
   const[location,setLocation] = useState('')
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&lat=43.985489&lon=22.9446255&appid=ea5ec0ba2f81de8d7f3d76bd1a95e0f8`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=ea5ec0ba2f81de8d7f3d76bd1a95e0f8`
 
   const searchLocation = (e) =>{
     if(e.key === 'Enter'){
@@ -13,6 +13,7 @@ function App() {
         setData(response.data)
         console.log(response.data)
       })
+      setLocation('')
   }
   }
 
@@ -30,30 +31,32 @@ function App() {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p>Calafat</p>
+            <p>{data.name}</p>
           </div>
           <div className="temp">
-            <h1>24°C</h1>
+            {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
           </div>
           <div className="description">
-            <p>Clouds</p>
+            {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
         </div>
 
-        <div className="bottom">
-          <div className="feels">
-            <p className="bold">24°C</p>
-            <p>Feels Like</p>
+        {data.name != undefined &&
+          <div className="bottom">
+            <div className="feels">
+              {data.main ? <p className="bold">{data.main.feels_like.toFixed()}°C</p> : null}
+              <p>Feels Like</p>
+            </div>
+            <div className="humidity">
+              {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
+              <p>Humidity</p>
+            </div>
+            <div className="wind">
+              {data.wind ? <p className="bold">{data.wind.speed}MPH</p> : null}
+              <p>Wind Speed</p>
+            </div>
           </div>
-          <div className="humidity">
-            <p className="bold">68%</p>
-            <p>Humidity</p>
-          </div>
-          <div className="wind">
-            <p className="bold">3 KM/H</p>
-            <p>Wind Speed</p>
-          </div>
-        </div>
+        }
       </div>
       
     </div>
