@@ -17,8 +17,26 @@ function App() {
   }
   }
 
+  // const getDescription =  () => {
+  //   switch(data.weather){
+  //     case 'Rain':
+  //       return this.getRainComponent();
+  //       break;
+  //     case 'Clouds':
+  //       return this.getCloudsComponent();  
+  //       break;
+  //     case 'Clear':
+  //       return this.getClearComponent();  
+  //       break;
+  //     default:
+  //       return null;
+  //       break;
+  //   }
+  // } 
+
   return (
     <div className="app">
+      {/* <img src="../assets/weather.jpg" /> */}
       <div className="search">
         <input
           value={location}
