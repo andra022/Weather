@@ -77,7 +77,7 @@ h1{
 }
 
 .app input:hover{
-  background: rgba(255, 255, 255, 0.182);
+  background: rgba(255, 255, 255, 0.379);
 }
 
 .container{
@@ -117,4 +117,20 @@ h1{
 
 .bold{
   font-weight: 700;
+}
+
+.app.clouds{
+  background: url('./assets/clouds.jpg') center/cover;
+}
+
+.app.rain{
+  background: url('./assets/rain.jpg') center/cover;
+}
+
+.app.clear{
+  background: url('./assets/sunny.jpg') center/cover;
+}
+
+.app.fog{
+  background: url('./assets/fog.jpg') center/cover;
 }

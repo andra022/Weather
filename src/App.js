@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import { render } from '@testing-library/react'
 
 function App() {
   const[data,setData] = useState({})
@@ -17,26 +18,23 @@ function App() {
   }
   }
 
-  // const getDescription =  () => {
-  //   switch(data.weather){
-  //     case 'Rain':
-  //       return this.getRainComponent();
-  //       break;
-  //     case 'Clouds':
-  //       return this.getCloudsComponent();  
-  //       break;
-  //     case 'Clear':
-  //       return this.getClearComponent();  
-  //       break;
-  //     default:
-  //       return null;
-  //       break;
-  //   }
-  // } 
+  const getContainerClasses = (weather) =>  {
+
+    console.log("weather= ",weather);
+    const weatherFromApi = (weather && weather[0] && weather[0].main) || 'none';
+    switch (weatherFromApi) {
+      case 'Rain' : return 'app rain'
+      case 'Clouds' : return 'app clouds'
+      case 'Clear' : return 'app clear'
+      case 'Fog': return 'app fog'
+      default : return 'app'
+    }
+  
+  }
 
   return (
-    <div className="app">
-      {/* <img src="../assets/weather.jpg" /> */}
+    <div className={getContainerClasses(data && data.weather)}>
+
       <div className="search">
         <input
           value={location}
@@ -70,7 +68,7 @@ function App() {
               <p>Humidity </p>
             </div>
             <div className="wind">
-              {data.wind ? <p className="bold">{data.wind.speed}MPH</p> : null}
+              {data.wind ? <p className="bold">{data.wind.speed}KM/H</p> : null}
               <p>Wind Speed</p>
             </div>
           </div>
@@ -79,6 +77,7 @@ function App() {
       
     </div>
   );
+  
 }
 
 export default App;
