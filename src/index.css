@@ -60,7 +60,12 @@ h1{
 
 .app .search{
   text-align: center;
-  padding: 2rem;
+  padding: 1.2rem;
+}
+
+.App-logo{
+  height: 6vmin;
+  pointer-events: none;
 }
 
 .app input{
@@ -81,8 +86,6 @@ h1{
 }
 
 .container{
-  /* max-width: 700px; */
-  /* height: 600px; */
   margin: auto;
   padding: 0 1rem;
   position: relative;

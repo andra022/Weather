@@ -1,7 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import logo from './logo2.png'
 
 function App() {
+  useEffect( () => {
+    document.title = 'Weather';
+    document.logo = './logo1.png';
+  });
+
   const[data,setData] = useState({})
   const[location,setLocation] = useState('')
 
@@ -36,7 +42,7 @@ function App() {
 
   return (
     <div className={getContainerClasses(data && data.weather)}>
-
+        <img src={logo} className="App-logo" alt="logo" />
       <div className="search">
         <input
           value={location}
