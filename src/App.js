@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import axios from 'axios'
-import { render } from '@testing-library/react'
 
 function App() {
   const[data,setData] = useState({})
@@ -27,6 +26,9 @@ function App() {
       case 'Clouds' : return 'app clouds'
       case 'Clear' : return 'app clear'
       case 'Fog': return 'app fog'
+      case 'Thunderstorm': return 'app thunderstorm'
+      case 'Snow': return 'app snow'
+      case 'Sleet': return 'app sleet'
       default : return 'app'
     }
   
@@ -57,7 +59,7 @@ function App() {
           </div>
         </div>
 
-        {data.name != undefined &&
+        {data.name !== undefined &&
           <div className="bottom">
             <div className="feels">
               {data.main ? <p className="bold">{data.main.feels_like.toFixed()}°C</p> : null}

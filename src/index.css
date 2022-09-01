@@ -134,3 +134,15 @@ h1{
 .app.fog{
   background: url('./assets/fog.jpg') center/cover;
 }
+
+.app.thunderstorm{
+  background: url('./assets/thunderstorm.jpg') center/cover;
+}
+
+.app.snow{
+  background: url('./assets/snow.jpg') center/cover;
+}
+
+.app.sleet{
+  background: url('./assets/sleet.jpg') center/cover;
+}
