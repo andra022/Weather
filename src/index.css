@@ -4,6 +4,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-y: auto;
+  position: relative;
 }
 
 @media screen and (min-width: 100px) and (max-width: 320px)
