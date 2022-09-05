@@ -20,7 +20,7 @@ function App() {
         console.log(response.data)
       })
       setLocation('')
-  }
+    }
   }
 
   const getContainerClasses = (weather) =>  {
@@ -40,9 +40,10 @@ function App() {
 
   return (
     <div className={getContainerClasses(data && data.weather)}>
+
         <div className='logo-fam'>
          <img src={logo} className="App-logo" alt="logo" />
-         <h2 class="font-effect-shadow-multiple">.B.A.S. Weather</h2>
+         <h2 className="font-effect-shadow-multiple">.B.A.S. Weather</h2>
         </div>
 
       <div className="search">
@@ -54,7 +55,8 @@ function App() {
           type="text"
         />
       </div>
-
+      
+      <div className='container font-effect-shadow-multiple'>
         <div className="top">
           <div className="location">
             <p>{data.name}</p>
@@ -71,11 +73,11 @@ function App() {
           <div className="bottom">
             <div className="feels">
               {data.main ? <p className="bold">{data.main.feels_like.toFixed()}°C</p> : null}
-              <p>Feels Like </p>
+              <p>Feels Like</p>
             </div>
             <div className="humidity">
               {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
-              <p>Humidity </p>
+              <p>Humidity</p>
             </div>
             <div className="wind">
               {data.wind ? <p className="bold">{data.wind.speed}KM/H</p> : null}
@@ -83,7 +85,7 @@ function App() {
             </div>
           </div>
         }
-     
+      </div>
       
     </div>
   );

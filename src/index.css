@@ -1,4 +1,4 @@
-@import url('https://fonts.google.com/specimen/Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap&effect=shadow-multiple');
 @import url('https://fonts.googleapis.com/css?family=Sofia&effect=shadow-multiple');
 
 *{
@@ -11,30 +11,24 @@
 
 @media screen and (min-width: 100px) and (max-width: 320px)
   {
-      .body
-      {
-          width: 30px;
-      }
-  }
-
-  @media screen and (min-width: 100px) and (max-width: 320px)
-  {
       .container
       {
-          width: 30px;
+          width: 310px;
+      }
+      .App-logo
+      {
+        width: 25px;
       }
   }
 
 body {
-  font-family: 'Roboto', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 p{
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 h1{
@@ -42,27 +36,26 @@ h1{
 }
 
 .logo-fam{
-  position: relative;
+  position: sticky;
   text-align: left;
   color: white;
 }
 
 h2{
-  padding-left: 1rem;
+  padding-left: 1.5rem;
   font-family: 'Sofia', sans-serif;
-  font-size: 1.03rem;
+  font-size: 0.9rem;
   color: #000000;
   text-shadow: 6px 6px 6px rgb(60, 153, 230);
-  position: absolute;
-  bottom: 4px;
+  position: sticky;
+  bottom: 18px;
   left: 15px;
-  
 }
 
 .App-logo{
   padding-top: 0.5rem;
   padding-left: 0.5rem;
-  height: 6.5vmin;
+  height: 7vmin;
   pointer-events: none;
 }
 
@@ -87,7 +80,7 @@ h2{
 
 .app .search{
   text-align: center;
-  padding: 1.2rem;
+  padding: 1rem;
 }
 
 
@@ -108,19 +101,11 @@ h2{
   background: rgba(255, 255, 255, 0.379);
 }
 
-/* .container{
-  margin: auto;
-  padding: 0 1rem;
-  position: relative;
-  top: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
-
 .app .top{
+  padding-left: 0.7rem;
+  padding-top: 0.6rem;
   width: 100%;
-  margin: 1rem auto;
+  margin: 3rem auto;
 }
 
 .app .description{
@@ -135,14 +120,14 @@ h2{
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
-  margin: 19rem auto;
-  padding: 1rem;
+  margin: 20rem auto;
+  padding: 1.2rem;
   border-radius: 12px;
   background-color: rgba(255,255,255, 0.2);
 }
 
 .bold{
-  font-weight: 700;
+  font-weight: 550;
 }
 
 .app.clouds{
@@ -154,7 +139,7 @@ h2{
 }
 
 .app.clear{
-  background: url('./assets/sunny.jpg') center/cover;
+  background: url('./assets/clear.jpg') center/cover;
 }
 
 .app.fog{
