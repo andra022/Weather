@@ -4,7 +4,7 @@ import logo from './logo2.png'
 
 function App() {
   useEffect( () => {
-    document.title = 'Weather App ';
+    document.title = 'Weather ';
     document.logo = './logo1.png';
   });
 
