@@ -1,4 +1,5 @@
 @import url('https://fonts.google.com/specimen/Roboto');
+@import url('https://fonts.googleapis.com/css?family=Sofia&effect=shadow-multiple');
 
 *{
   box-sizing: border-box;
@@ -40,6 +41,30 @@ h1{
   font-size: 6rem;
 }
 
+.logo-fam{
+  position: relative;
+  text-align: left;
+  color: white;
+}
+
+h2{
+  padding-left: 1rem;
+  font-family: 'Sofia', sans-serif;
+  font-size: 1.03rem;
+  color: #000000;
+  text-shadow: 6px 6px 6px rgb(60, 153, 230);
+  position: absolute;
+  bottom: 4px;
+  left: 15px;
+  
+}
+
+.App-logo{
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  height: 6.5vmin;
+  pointer-events: none;
+}
 
 .app{
   width: 100%;
@@ -65,10 +90,6 @@ h1{
   padding: 1.2rem;
 }
 
-.App-logo{
-  height: 6vmin;
-  pointer-events: none;
-}
 
 .app input{
   padding: .7rem 1.5rem;
@@ -87,7 +108,7 @@ h1{
   background: rgba(255, 255, 255, 0.379);
 }
 
-.container{
+/* .container{
   margin: auto;
   padding: 0 1rem;
   position: relative;
@@ -95,7 +116,7 @@ h1{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
 .app .top{
   width: 100%;
@@ -114,7 +135,7 @@ h1{
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
-  margin: 14rem auto;
+  margin: 19rem auto;
   padding: 1rem;
   border-radius: 12px;
   background-color: rgba(255,255,255, 0.2);

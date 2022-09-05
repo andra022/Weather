@@ -4,7 +4,7 @@ import logo from './logo2.png'
 
 function App() {
   useEffect( () => {
-    document.title = 'Weather';
+    document.title = 'Weather App ';
     document.logo = './logo1.png';
   });
 
@@ -24,8 +24,6 @@ function App() {
   }
 
   const getContainerClasses = (weather) =>  {
-
-    console.log("weather= ",weather);
     const weatherFromApi = (weather && weather[0] && weather[0].main) || 'none';
     switch (weatherFromApi) {
       case 'Rain' : return 'app rain'
@@ -42,7 +40,11 @@ function App() {
 
   return (
     <div className={getContainerClasses(data && data.weather)}>
-        <img src={logo} className="App-logo" alt="logo" />
+        <div className='logo-fam'>
+         <img src={logo} className="App-logo" alt="logo" />
+         <h2 class="font-effect-shadow-multiple">.B.A.S. Weather</h2>
+        </div>
+
       <div className="search">
         <input
           value={location}
@@ -52,7 +54,7 @@ function App() {
           type="text"
         />
       </div>
-      <div className="container">
+
         <div className="top">
           <div className="location">
             <p>{data.name}</p>
@@ -81,7 +83,7 @@ function App() {
             </div>
           </div>
         }
-      </div>
+     
       
     </div>
   );
