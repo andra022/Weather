@@ -96,6 +96,7 @@ function App() {
           }
 
           {data.name === undefined &&
+          
             <div  className='top'>
               <div className="location">
                 <p className='bold'>Search Location</p>
@@ -113,6 +114,7 @@ function App() {
           }
 
           {data.name === undefined &&
+
               <div className="bottom">
                 <div className="feels">
                   <p className='bold'>N/A</p>
