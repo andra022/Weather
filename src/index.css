@@ -29,10 +29,11 @@ body {
 }
 
 p{
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 h1{
+  padding-top: 0.5rem;
   padding-left: 0.5rem;
   font-size: 6rem;
 }
@@ -123,8 +124,8 @@ h2{
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
-  margin: 19rem auto;
-  padding: 1.3rem;
+  margin: 16rem auto;
+  padding: 1.5rem;
   border-radius: 12px;
   background-color: rgba(255,255,255, 0.2);
 }
