@@ -41,12 +41,13 @@ function App() {
   return (
     
     <div className={getContainerClasses(data && data.weather)}>
+
       { data.name !== undefined &&
         <div className='true'>
           <div className='logo-fam'>
             <img src={logo} className="App-logo" alt="logo" />
             <h2 className="font-effect-shadow-multiple">.B.A.S. Weather</h2>
-            </div>
+          </div>
 
           <div className="search">
             <input
@@ -63,49 +64,55 @@ function App() {
               <div className="location">
                 <p>{data.name}</p>
               </div>
+
               <div className="temp">
                 {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
               </div>
+
               <div className="description">
                 {data.weather ? <p>{data.weather[0].main}</p> : null}
               </div>
             </div>
 
           
-              <div className="bottom">
-                <div className="feels">
-                  {data.main ? <p className="bold">{data.main.feels_like.toFixed()}°C</p> : null}
-                  <p>Feels Like</p>
-                </div>
-                <div className="humidity">
-                  {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
-                  <p>Humidity</p>
-                </div>
-                <div className="wind">
-                  {data.wind ? <p className="bold">{data.wind.speed}KM/H</p> : null}
-                  <p>Wind Speed</p>
-                </div>
-                <div className='temp_min'>
-                  {data.main ? <p className='bold'>{data.main.temp_min.toFixed()}°C</p> : null}
-                  <p>Min Temp</p>
-                </div>
-                <div className='temp_max'>
-                  {data.main ? <p className='bold'>{data.main.temp_max.toFixed()}°C</p> : null}
-                  <p>Max Temp</p>
-                </div>
+            <div className="bottom">
+              <div className="feels">
+                {data.main ? <p className="bold">{data.main.feels_like.toFixed()}°C</p> : null}
+                <p>Feels Like</p>
+              </div>
+
+              <div className="humidity">
+                {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
+                <p>Humidity</p>
+              </div>
+
+              <div className="wind">
+                {data.wind ? <p className="bold">{data.wind.speed}KM/H</p> : null}
+                <p>Wind Speed</p>
+              </div>
+
+              <div className='temp_min'>
+                {data.main ? <p className='bold'>{data.main.temp_min.toFixed()}°C</p> : null}
+                <p>Min Temp</p>
+              </div>
+
+              <div className='temp_max'>
+                {data.main ? <p className='bold'>{data.main.temp_max.toFixed()}°C</p> : null}
+                <p>Max Temp</p>
               </div>
             </div>
+
           </div>
+        </div>
       }
 
 
-        {data.name === undefined &&
-          <div className='false'>
-
-            <div className='logo-fam'>
-              <img src={logo} className="App-logo" alt="logo" />
-              <h2 className="font-effect-shadow-multiple">.B.A.S. Weather</h2>
-            </div>
+      {data.name === undefined &&
+        <div className='false'>
+          <div className='logo-fam'>
+            <img src={logo} className="App-logo" alt="logo" />
+            <h2 className="font-effect-shadow-multiple">.B.A.S. Weather</h2>
+          </div>
 
           <div className="search">
             <input
@@ -117,53 +124,52 @@ function App() {
             />
           </div>
             
-            <div  className='top'>
-              <div className="location">
-                <p className='bold'>Search Location</p>
-              </div>
-
-              <div className='temp'>
-                <h1 className='bold'>N/A°C</h1>
-              </div>
-
-              <div className="description">
-                <p className='bold'>Description</p>
-                <p className='bold'>N/A</p>
-              </div>
+          <div className='top font-effect-shadow-multiple'>
+            <div className="location">
+              <p className='bold'>Search Location</p>
             </div>
+
+            <div className='temp'>
+              <h1 className='bold'>N/A°C</h1>
+            </div>
+
+            <div className="description">
+              <p className='bold'>Description</p>
+              <p className='bold'>N/A</p>
+            </div>
+          </div>
             
-              <div className="bottom">
-                <div className="feels">
-                  <p className='bold'>N/A</p>
-                  <p>Feels Like</p>
-                </div>
-
-                <div className="humidity">
+          <div className="bottom font-effect-shadow-multiple">
+              <div className="feels">
                 <p className='bold'>N/A</p>
-                  <p>Humidity</p>
-                </div>
+                <p>Feels Like</p>
+              </div>
 
-                <div className="wind">
-                  <p className='bold'>N/A</p>
-                  <p>Wind Speed</p>
-                </div>
+              <div className="humidity">
+                <p className='bold'>N/A</p>
+                <p>Humidity</p>
+              </div>
 
-                <div className='temp_min'>
-                  <p className='bold'>N/A°C</p>
-                  <p>Min Temp</p>
-                </div>
+              <div className="wind">
+                <p className='bold'>N/A</p>
+                <p>Wind Speed</p>
+              </div>
 
-                <div className='temp_max'>
+              <div className='temp_min'>
                 <p className='bold'>N/A°C</p>
-                  <p>Max Temp</p>
-                </div>
-            </div>
-            </div>
-        }    
-    </div>
-   
-  );
-  
+                <p>Min Temp</p>
+              </div>
+
+              <div className='temp_max'>
+                <p className='bold'>N/A°C</p>
+                <p>Max Temp</p>
+              </div>
+
+          </div>
+        </div>
+      }    
+  </div> 
+  );  
 }
 
 export default App;

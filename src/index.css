@@ -7,6 +7,10 @@
   padding: 0;
   overflow-y: auto;
   position: relative;
+
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media screen and (min-width: 100px) and (max-width: 320px)
@@ -31,12 +35,6 @@
         width: 25px;
       }
   }
-
-body {
-  font-family: 'Josefin Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 p{
   font-size: 1.3rem;
@@ -91,12 +89,10 @@ h2{
   z-index: -1;
 }
 
-
 .app .search{
   text-align: center;
   padding: 1rem;
 }
-
 
 .app input{
   padding: .7rem 1.5rem;
