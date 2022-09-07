@@ -95,8 +95,10 @@ function App() {
             </div>
           }
 
-          {data.name === undefined &&
-          
+
+        {data.name === undefined &&
+          <div className='main'>
+            
             <div  className='top'>
               <div className="location">
                 <p className='bold'>Search Location</p>
@@ -111,10 +113,7 @@ function App() {
                 <p className='bold'>N/A</p>
               </div>
             </div>
-          }
-
-          {data.name === undefined &&
-
+            
               <div className="bottom">
                 <div className="feels">
                   <p className='bold'>N/A</p>
@@ -141,8 +140,9 @@ function App() {
                   <p>Max Temp</p>
                 </div>
             </div>
-          
+          </div>
           }
+
         </div>
       
     </div>
