@@ -43,7 +43,7 @@ p{
 h1{
   padding-top: 0.5rem;
   padding-left: 0.5rem;
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 .logo-fam{
@@ -130,8 +130,8 @@ h2{
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
-  margin: 16rem auto;
-  padding: 1.5rem;
+  margin: 14rem auto;
+  padding: 2rem;
   border-radius: 12px;
   background-color: rgba(255,255,255, 0.2);
 }
@@ -149,7 +149,15 @@ h2{
 }
 
 .false .bottom{
-  margin: 14rem auto;
+  margin: 10rem auto;
+  padding: 2rem;
+}
+
+.false .description{
+  position: relative;
+  right: -85%;
+  transform-origin: 0 0;
+  transform: rotate(269deg);
 }
 
 .bold{
