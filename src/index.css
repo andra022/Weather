@@ -191,3 +191,7 @@ h2{
 .app.sleet{
   background: url('./assets/sleet.jpg') center/cover;
 }
+
+.app.mist{
+  background: url('./assets/fog.jpg') center/cover;
+}
