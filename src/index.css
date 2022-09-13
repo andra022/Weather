@@ -195,3 +195,7 @@ h2{
 .app.mist{
   background: url('./assets/fog.jpg') center/cover;
 }
+
+.app.haze{
+  background: url('./assets/haze.jpg') center/cover;
+}
