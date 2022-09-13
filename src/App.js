@@ -33,6 +33,8 @@ function App() {
       case 'Thunderstorm': return 'app thunderstorm'
       case 'Snow': return 'app snow'
       case 'Sleet': return 'app sleet'
+      case 'Mist': return 'app mist'
+      case 'Haze': return 'app haze'
       default : return 'app'
     }
   
